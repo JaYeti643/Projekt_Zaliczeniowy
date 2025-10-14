@@ -20,7 +20,7 @@ public class HomeController : Controller
 
     public IActionResult Age(DateTime date)
     {
-        ViewBag.Result = DateTime.Now.Year - date.Year ;
+        ViewBag.age = DateTime.Now.Year - date.Year ;
         return View();
     }
     

@@ -1,0 +1,43 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Komputery</h2>
+<a class="btn btn-outline-primary" asp-controller="Computer" asp-action="Create" >Dodaj Komputer Do Listy</a>
+<table class="table">
+    <thead>
+    <th>Nazwa Komputera</th>
+    <th>Procesor</th>
+    <th>Pamięć Ram</th>
+    <th>Karta Graficzna</th>
+    <th>Producent</th>
+    <th>Data Produkcji</th>
+    </thead>
+    <tbody>
+
+    @{
+        foreach (var computer in Model)
+        {
+            <tr>
+                <td>@computer.Name</td>
+                <td>@computer.Cpu</td>
+                <td>@computer.Ram</td>
+                <td>@computer.Gpu</td>
+                <td>@computer.Producent</td>
+                <td>@computer.DateOfProduction</td>
+                <td>
+                    <a class="btn btn-outline-primary">Edytuj</a>
+                    <a class="btn btn-outline-danger">Usuń</a>
+                </td>
+            </tr>
+        }
+    }
+
+
+    </tbody>
+
+
+</table>

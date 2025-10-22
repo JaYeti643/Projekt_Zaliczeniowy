@@ -8,9 +8,9 @@ public class ContactController : Controller
     private static Dictionary<int, Contact> _contacts = new()
     {
         {
-            1, new Contact()
+            3, new Contact()
             {
-                Id = 1,
+                Id = 3,
                 Name = "Adam",
                 Email = "ad@wsei.edu.pl",
                 BirthDate = DateOnly.FromDateTime(new DateTime(2000, 03, 11))

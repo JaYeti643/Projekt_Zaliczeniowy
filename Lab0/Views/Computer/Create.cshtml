@@ -1,0 +1,46 @@
+﻿@model Computer
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Dodaj Komputer Do Listy</h2>
+<form method="post" asp-action="Create">
+    <div class="mb-2">
+        <label class="form-label" asp-for="Name">Nazwa Komputera:</label>
+        <input class="form-control" asp-for="Name"/>
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-2">
+        <label class="form-label" asp-for="Cpu">Procesor:</label>
+        <input class="form-control" asp-for="Cpu"/>
+        <span class="text-danger" asp-validation-for="Cpu"></span>
+    </div>
+    <div class="mb-2">
+        <label class="form-label" asp-for="Ram">Pamięć Ram:</label>
+        <input class="form-control" asp-for="Ram"/>
+        <span class="text-danger" asp-validation-for="Ram"></span>
+    </div>
+    <div class="mb-2">
+        <label class="form-label" asp-for="Gpu">Karta Graficzna:</label>
+        <input class="form-control" asp-for="Gpu"/>
+        <span class="text-danger" asp-validation-for="Gpu"></span>
+    </div>
+    <div class="mb-2">
+        <label class="form-label" asp-for="Producent">Producent:</label>
+        <input class="form-control" asp-for="Producent"/>
+        <span class="text-danger" asp-validation-for="Producent"></span>
+    </div>
+    <div class="mb-2">
+        <label class="form-label" asp-for="DateOfProduction">Data Produkcji:</label>
+        <input class="form-control" asp-for="DateOfProduction"/>
+        <span class="text-danger" asp-validation-for="DateOfProduction"></span>
+    </div>
+    <div>
+        <button class="btn btn-outline-primary" type="submit" >Zapisz</button>
+        <button class="btn btn-outline-primary"asp-action="Index">Powrót</button>
+    </div>
+    
+
+</form>

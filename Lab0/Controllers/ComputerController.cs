@@ -5,13 +5,17 @@ namespace Lab0.Controllers;
 
 public class ComputerController : Controller
 {
-    static Dictionary<int, Computer> _computers = new Dictionary<int, Computer>();
-   
-    private static int i = 0;
-    // GET
+    private readonly IComputerService _service;
+
+    public ComputerController(IComputerService service)
+    {
+        _service = service;
+    }
+
     public IActionResult Index()
     {
-        return View(_computers.Values.ToList());
+        var computers = _service.FindAll();
+        return View(computers);
     }
 
     [HttpGet]
@@ -25,35 +29,26 @@ public class ComputerController : Controller
     {
         if (ModelState.IsValid)
         {
-            int id = _computers.Keys.Count != 0 ? _computers.Keys.Max() : 0;
-            computer.Id = id + 1;
-            _computers.Add(computer.Id, computer);
-            RedirectToAction("Index");
-
+            _service.Add(computer);
+            return RedirectToAction("Index");
         }
         return View(computer);
     }
 
-    
     [HttpGet]
     public IActionResult Edit(int id)
     {
-        if (_computers.Keys.Contains(id))
-        {
-            return View(_computers[id]);
-        }
-        else
-        {
-            return NotFound();
-        }
+        var computer = _service.FindById(id);
+        if (computer == null) return NotFound();
+        return View(computer);
     }
 
     [HttpPost]
     public IActionResult Edit(Computer computer)
     {
-        if (ModelState.IsValid && _computers.ContainsKey(computer.Id))
+        if (ModelState.IsValid)
         {
-            _computers[computer.Id] = computer;
+            _service.Update(computer);
             return RedirectToAction("Index");
         }
         return View(computer);
@@ -62,36 +57,23 @@ public class ComputerController : Controller
     [HttpGet]
     public IActionResult Details(int id)
     {
-        if (_computers.ContainsKey(id))
-        {
-            return View(_computers[id]);
-        }
-        else
-        {
-            return NotFound();
-        }
+        var computer = _service.FindById(id);
+        if (computer == null) return NotFound();
+        return View(computer);
     }
 
     [HttpGet]
     public IActionResult Delete(int id)
     {
-        if (_computers.ContainsKey(id))
-        {
-            return View(_computers[id]);
-        }
-        else
-        {
-            return NotFound();
-        }
+        var computer = _service.FindById(id);
+        if (computer == null) return NotFound();
+        return View(computer);
     }
 
     [HttpPost, ActionName("Delete")]
     public IActionResult DeleteConfirmed(int id)
     {
-        if (_computers.ContainsKey(id))
-        {
-            _computers.Remove(id);
-        }
+        _service.Delete(id);
         return RedirectToAction("Index");
     }
 }

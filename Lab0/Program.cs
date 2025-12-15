@@ -1,7 +1,11 @@
+using Lab0.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<Data.AppDbContext>();
+builder.Services.AddTransient<IComputerService, ComputerService>();
 
 var app = builder.Build();
 

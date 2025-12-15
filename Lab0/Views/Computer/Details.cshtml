@@ -1,0 +1,17 @@
+﻿@model Computer
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Szczegóły Komputera</h2>
+<ul>
+    <li><strong>Nazwa:</strong>@Model.Name</li>
+    <li><strong>Procesor:</strong>@Model.Cpu</li>
+    <li><strong>Pamięć:</strong>@Model.Ram</li>
+    <li><strong>GPU:</strong>@Model.Gpu</li>
+    <li><strong>Producent:</strong>@Model.Producent</li>
+    <li><strong>Data Produkcji:</strong>@Model.DateOfProduction</li>
+    
+</ul>

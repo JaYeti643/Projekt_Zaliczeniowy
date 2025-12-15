@@ -29,9 +29,10 @@
                 <td>@computer.Producent</td>
                 <td>@computer.DateOfProduction</td>
                 <td>
-                    <a class="btn btn-outline-primary">Edytuj</a>
-                    <a class="btn btn-outline-danger">Usuń</a>
-                </td>
+                    <a class="btn btn-outline-primary" asp-controller="Computer" asp-action="Edit" asp-route-id="@computer.Id">Edytuj</a>
+                    <a class="btn btn-outline-success" asp-controller="Computer" asp-action="Details" asp-route-id="@computer.Id">Szczegóły</a>
+                    <a class="btn btn-outline-danger" asp-controller="Computer" asp-action="Delete" asp-route-id="@computer.Id">Usuń</a>
+                </td> 
             </tr>
         }
     }

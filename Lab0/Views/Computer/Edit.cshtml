@@ -5,8 +5,8 @@
     Layout = "_Layout";
 }
 
-<h2>Dodaj Komputer Do Listy</h2>
-<form method="post" asp-action="Create">
+<h2>Edytuj</h2>
+<form method="post" asp-action="Edit">
     <div class="mb-2">
         <label class="form-label" asp-for="Name">Nazwa Komputera:</label>
         <input class="form-control" asp-for="Name"/>
@@ -38,9 +38,7 @@
         <span class="text-danger" asp-validation-for="DateOfProduction"></span>
     </div>
     <div>
-        <button class="btn btn-outline-primary" type="submit"   >Zapisz</button>
+        <button class="btn btn-outline-primary" type="submit" >Zapisz</button>
         <button class="btn btn-outline-primary"asp-action="Index">Powrót</button>
     </div>
-    
-
 </form>

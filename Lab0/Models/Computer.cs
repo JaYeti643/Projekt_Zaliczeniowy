@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Lab0.Models;
 
@@ -31,4 +33,9 @@ public class Computer
     [Required(ErrorMessage = "Proszę podać Datę Produkcji!")]
     [DataType(DataType.Date)]
     public DateOnly? DateOfProduction { get; set; }
+    
+    [HiddenInput]
+    public int ManufacturerId { get; set; }
+    [ValidateNever]
+    public List<SelectListItem> Manufacturers { get; set; }
 }

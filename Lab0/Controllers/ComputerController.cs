@@ -1,12 +1,14 @@
-﻿using Lab0.Models;
+﻿using Data.Entities;
+using Lab0.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Lab0.Controllers;
 
 public class ComputerController : Controller
 {
     private readonly IComputerService _service;
-
+    
     public ComputerController(IComputerService service)
     {
         _service = service;
@@ -18,10 +20,25 @@ public class ComputerController : Controller
         return View(computers);
     }
 
+    private void InitManufacturers(Computer model)
+    {
+        model.Manufacturers = _service
+            .FindAllManufacturers()
+            .Select<ManufacturerEntity, SelectListItem>(m => new SelectListItem() { Value = m.Id.ToString(), Text = m.Title })
+            .ToList();
+    }
+
+    [HttpGet]
     [HttpGet]
     public IActionResult Create()
     {
-        return View();
+        var model = new Computer();
+        model.Manufacturers = _service
+            .FindAllManufacturers()
+            .Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Title })
+            .ToList();
+
+        return View(model);
     }
 
     [HttpPost]
@@ -32,6 +49,13 @@ public class ComputerController : Controller
             _service.Add(computer);
             return RedirectToAction("Index");
         }
+
+        
+        computer.Manufacturers = _service
+            .FindAllManufacturers()
+            .Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Title })
+            .ToList();
+
         return View(computer);
     }
 

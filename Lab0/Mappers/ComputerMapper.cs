@@ -15,7 +15,8 @@ public class ComputerMapper
             Ram = entity.Ram,
             Gpu = entity.Gpu,
             Producent = entity.Producent,
-            DateOfProduction = entity.DateOfProduction
+            DateOfProduction = entity.DateOfProduction,
+            ManufacturerId = entity.ManufacturerId
         };
     }
 
@@ -29,7 +30,8 @@ public class ComputerMapper
             Ram = model.Ram,
             Gpu = model.Gpu,
             Producent = model.Producent,
-            DateOfProduction = model.DateOfProduction.Value
+            DateOfProduction = model.DateOfProduction ?? DateOnly.FromDateTime(DateTime.Now),
+            ManufacturerId = model.ManufacturerId
         };
     }
 }

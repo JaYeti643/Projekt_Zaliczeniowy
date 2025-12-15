@@ -45,5 +45,10 @@ public class ComputerService : IComputerService
         _context.Computers.Update(ComputerMapper.ToEntity(computer));
         _context.SaveChanges();
     }
+
+    public List<ManufacturerEntity> FindAllManufacturers()
+    {
+        return _context.Manufacturers.ToList();
+    }
 }
 

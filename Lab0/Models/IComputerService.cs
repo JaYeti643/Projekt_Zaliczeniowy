@@ -1,4 +1,6 @@
-﻿namespace Lab0.Models;
+﻿using Data.Entities;
+
+namespace Lab0.Models;
 
 public interface IComputerService
 {
@@ -7,5 +9,6 @@ public interface IComputerService
     List<Computer> FindAll();
     Computer? FindById(int id);
     void Update(Computer computer);
+    List<ManufacturerEntity> FindAllManufacturers();
 
 }

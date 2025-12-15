@@ -30,4 +30,9 @@ public class ComputerEntity
 
     [Column("production_date")]
     public DateOnly DateOfProduction { get; set; }
+    
+    public int ManufacturerId { get; set; }
+    public ManufacturerEntity? Manufacturer { get; set; }
+    
+    public DateTime Created { get; set; }
 }

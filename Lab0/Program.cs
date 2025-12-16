@@ -1,4 +1,6 @@
+using Data;
 using Lab0.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

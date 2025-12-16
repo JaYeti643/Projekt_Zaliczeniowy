@@ -11,7 +11,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Pages\Manufacturer\" />
+      <Folder Include="Pages\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Contact\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contact\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Calculator\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Calculator\Form.cshtml" />
     </ItemGroup>
 
 </Project>

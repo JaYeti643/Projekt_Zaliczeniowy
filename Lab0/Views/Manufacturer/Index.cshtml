@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Data.Entities.ManufacturerEntity>
+
+<h2>Producenci</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Dodaj producenta</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nazwa</th>
+        <th>NIP</th>
+        <th>REGON</th>
+        <th>Akcje</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.Title</td>
+            <td>@m.Nip</td>
+            <td>@m.Regon</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@m.Id" class="btn btn-warning">Edytuj</a>
+                <a asp-action="Delete" asp-route-id="@m.Id" class="btn btn-danger">Usuń</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

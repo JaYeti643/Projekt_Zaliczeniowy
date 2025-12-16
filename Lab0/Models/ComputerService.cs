@@ -50,5 +50,20 @@ public class ComputerService : IComputerService
     {
         return _context.Manufacturers.ToList();
     }
+    public List<Computer> FindPaged(int pageNumber, int pageSize)
+    {
+        return _context.Computers
+            .OrderBy(c => c.Id)
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
+            .Select(e => ComputerMapper.FromEntity(e))
+            .ToList();
+    }
+
+    public int CountAll()
+    {
+        return _context.Computers.Count();
+    }
+
 }
 

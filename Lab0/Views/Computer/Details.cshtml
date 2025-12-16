@@ -11,7 +11,21 @@
     <li><strong>Procesor:</strong>@Model.Cpu</li>
     <li><strong>Pamięć:</strong>@Model.Ram</li>
     <li><strong>GPU:</strong>@Model.Gpu</li>
-    <li><strong>Producent:</strong>@Model.Producent</li>
+    <li><strong>Producent Gpu:</strong>@Model.Producent</li>
     <li><strong>Data Produkcji:</strong>@Model.DateOfProduction</li>
-    
+    <li><strong>Producent komputera:</strong>
+     
+        @{
+            var manufacturer = Model.Manufacturers?
+                .FirstOrDefault(m => m.Value == Model.ManufacturerId.ToString());
+            if (manufacturer != null)
+            {
+                @manufacturer.Text
+            }
+            else
+            {
+                @: (brak danych)
+            }
+        }
+    </li>
 </ul>

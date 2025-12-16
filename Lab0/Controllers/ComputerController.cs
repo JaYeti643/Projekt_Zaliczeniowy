@@ -14,9 +14,18 @@ public class ComputerController : Controller
         _service = service;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(int page = 1)
     {
-        var computers = _service.FindAll();
+        int pageSize = 10;
+
+        var computers = _service.FindPaged(page, pageSize);
+        int totalCount = _service.CountAll();
+
+        int totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+
+        ViewBag.CurrentPage = page;
+        ViewBag.TotalPages = totalPages;
+
         return View(computers);
     }
 
@@ -60,10 +69,17 @@ public class ComputerController : Controller
     }
 
     [HttpGet]
+  
     public IActionResult Edit(int id)
     {
         var computer = _service.FindById(id);
         if (computer == null) return NotFound();
+
+        computer.Manufacturers = _service
+            .FindAllManufacturers()
+            .Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Title })
+            .ToList();
+
         return View(computer);
     }
 
@@ -75,14 +91,27 @@ public class ComputerController : Controller
             _service.Update(computer);
             return RedirectToAction("Index");
         }
+
+        computer.Manufacturers = _service
+            .FindAllManufacturers()
+            .Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Title })
+            .ToList();
+
         return View(computer);
     }
 
     [HttpGet]
+   
     public IActionResult Details(int id)
     {
         var computer = _service.FindById(id);
         if (computer == null) return NotFound();
+
+        computer.Manufacturers = _service
+            .FindAllManufacturers()
+            .Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Title })
+            .ToList();
+
         return View(computer);
     }
 

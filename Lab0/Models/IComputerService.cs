@@ -11,4 +11,7 @@ public interface IComputerService
     void Update(Computer computer);
     List<ManufacturerEntity> FindAllManufacturers();
 
+    List<Computer> FindPaged(int pageNumber, int pageSize);
+    int CountAll();
+
 }

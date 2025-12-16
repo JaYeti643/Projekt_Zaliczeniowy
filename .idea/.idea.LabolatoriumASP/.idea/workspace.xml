@@ -8,31 +8,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="805b5d3c-2755-4bb7-bda5-d10c30d39539" name="Changes" comment="projekt 2">
-      <change afterPath="$PROJECT_DIR$/Data/Entities/ManufacturerEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LabolatoriumASP/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LabolatoriumASP/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="805b5d3c-2755-4bb7-bda5-d10c30d39539" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LabolatoriumASP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LabolatoriumASP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Entities/ComputerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Entities/ComputerEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/20251215202200_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/20251215202200_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/bin/Debug/net9.0/Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Data/bin/Debug/net9.0/Data.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/bin/Debug/net9.0/Data.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Data/bin/Debug/net9.0/Data.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/obj/Debug/net9.0/Data.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/obj/Debug/net9.0/ref/Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Data/obj/Debug/net9.0/ref/Data.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/obj/Debug/net9.0/refint/Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Data/obj/Debug/net9.0/refint/Data.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Data/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab0/Controllers/ComputerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Controllers/ComputerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab0/Mappers/ComputerMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Mappers/ComputerMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab0/Models/Computer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Models/Computer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab0/Lab0.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Lab0.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab0/Models/ComputerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Models/ComputerService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab0/Models/IComputerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Models/IComputerService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab0/Views/Computer/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Views/Computer/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab0/Views/Computer/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Views/Computer/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab0/Views/Computer/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Views/Computer/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab0/Views/Computer/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Views/Computer/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab0/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab0/bin/Debug/net9.0/Data.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/bin/Debug/net9.0/Data.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab0/bin/Debug/net9.0/Data.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/bin/Debug/net9.0/Data.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab0/bin/Debug/net9.0/Lab0.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/bin/Debug/net9.0/Lab0.dll" afterDir="false" />
@@ -47,6 +42,7 @@
       <change beforePath="$PROJECT_DIR$/Lab0/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/obj/Debug/net9.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab0/obj/Debug/net9.0/ref/Lab0.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/obj/Debug/net9.0/ref/Lab0.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab0/obj/Debug/net9.0/refint/Lab0.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/obj/Debug/net9.0/refint/Lab0.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab0/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Lab0/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,20 +102,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Lab0: http.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Projekt",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Lab0: http.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Projekt&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Lab0: http">
     <configuration name="Lab0: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lab0/Lab0.csproj" />
@@ -161,6 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765822611523</updated>
       <workItem from="1765822611925" duration="3202000" />
+      <workItem from="1765910209865" duration="2843000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <option name="closed" value="true" />
@@ -178,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765831755481</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Projekt 3">
+      <option name="closed" value="true" />
+      <created>1765834949248</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765834949248</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +195,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="s" />
     <MESSAGE value="projekt 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="projekt 2" />
+    <MESSAGE value="Projekt 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projekt 3" />
   </component>
 </project>

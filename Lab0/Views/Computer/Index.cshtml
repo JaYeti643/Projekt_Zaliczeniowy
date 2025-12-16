@@ -1,45 +1,51 @@
 ﻿@model List<Lab0.Models.Computer>
 
+<h1>Lista komputerów</h1>
 
-@{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
-}
+<p>
+    <a asp-controller="Computer" asp-action="Create" class="btn btn-primary">Dodaj komputer</a>
+</p>
 
-<h2>Komputery</h2>
-<a class="btn btn-outline-primary" asp-controller="Computer" asp-action="Create" >Dodaj Komputer Do Listy</a>
-<table class="table">
+<table class="table table-striped">
     <thead>
-    <th>Nazwa Komputera</th>
-    <th>Procesor</th>
-    <th>Pamięć Ram</th>
-    <th>Karta Graficzna</th>
-    <th>Producent </th>
-    <th>Data Produkcji</th>
+    <tr>
+        <th>Nazwa</th>
+        <th>CPU</th>
+        <th>RAM</th>
+        <th>GPU</th>
+        <th>Producent GPU</th>
+        <th>Data produkcji</th>
+        <th>Akcje</th>
+    </tr>
     </thead>
     <tbody>
-
-    @{
-        foreach (var computer in Model)
-        {
-            <tr>
-                <td>@computer.Name</td>
-                <td>@computer.Cpu</td>
-                <td>@computer.Ram</td>
-                <td>@computer.Gpu</td>
-                <td>@computer.Producent</td>
-                <td>@computer.DateOfProduction</td>
-                <td>
-                    <a class="btn btn-outline-primary" asp-controller="Computer" asp-action="Edit" asp-route-id="@computer.Id">Edytuj</a>
-                    <a class="btn btn-outline-success" asp-controller="Computer" asp-action="Details" asp-route-id="@computer.Id">Szczegóły</a>
-                    <a class="btn btn-outline-danger" asp-controller="Computer" asp-action="Delete" asp-route-id="@computer.Id">Usuń</a>
-                </td> 
-            </tr>
-        }
+    @foreach (var computer in Model)
+    {
+        <tr>
+            <td>@computer.Name</td>
+            <td>@computer.Cpu</td>
+            <td>@computer.Ram</td>
+            <td>@computer.Gpu</td>
+            <td>@computer.Producent</td>
+            <td>@computer.DateOfProduction?.ToString("yyyy-MM-dd")</td>
+            <td>
+                <a asp-controller="Computer" asp-action="Details" asp-route-id="@computer.Id" class="btn btn-info">Szczegóły</a>
+                <a asp-controller="Computer" asp-action="Edit" asp-route-id="@computer.Id" class="btn btn-warning">Edytuj</a>
+                <a asp-controller="Computer" asp-action="Delete" asp-route-id="@computer.Id" class="btn btn-danger">Usuń</a>
+            </td>
+        </tr>
     }
-
-
     </tbody>
-
-
 </table>
+
+
+<nav>
+    <ul class="pagination">
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+            </li>
+        }
+    </ul>
+</nav>
